@@ -1,0 +1,22 @@
+<div class="fixed-bottom" [style.left]="'10px'">
+  <div [@openClose]="isOpen ? 'open' : 'closed'" class="card w-25">
+    <div class="card-header p-0">
+      <div class="row">
+        <div class="col-7">
+          <h3 class="m-0 p-1 text-truncate">Nguyễn Bá Tuấn Anh</h3>
+        </div>
+        <div class="col-5">
+          <button mat-icon-button (click)="onCloseChat()" class="float-right" placement="top" ngbTooltip="Đóng">
+            <mat-icon>close</mat-icon>
+          </button>
+          <button mat-icon-button (click)="onToggleChat()" class="float-right" placement="top" [ngbTooltip]="isOpen ? 'Thu nhỏ' : 'Mở rộng'">
+            <mat-icon>{{isOpen ? 'expand_more' : 'expand_less'}}</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+    </div>
+  </div>
+</div>
